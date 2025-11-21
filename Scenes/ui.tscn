@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://4c0vph0d67q8"]
+
+[ext_resource type="Texture2D" uid="uid://bcptong371nxt" path="res://assets/Sprites/interactive/key_gotten.png" id="1_jxero"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxero"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdvrb"]
+atlas = ExtResource("1_jxero")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf4gj"]
+atlas = ExtResource("1_jxero")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2246s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdvrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf4gj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jxero")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2246s")

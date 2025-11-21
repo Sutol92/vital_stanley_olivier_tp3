@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgy4up4xolunx"]
+
+[ext_resource type="Script" uid="uid://chkhrpaskxe0y" path="res://Scripts/game.gd" id="1_wrm1d"]
+[ext_resource type="AudioStream" uid="uid://c544c1nptohpx" path="res://assets/sounds/Jorge Hernandez - Chopsticks ♫ NO COPYRIGHT 8-bit Music.mp3" id="2_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://cict4fxjyv6uk" path="res://assets/Sprites/interactive/title.png" id="2_wrm1d"]
+
+[node name="game" type="Node"]
+script = ExtResource("1_wrm1d")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wrm1d")
+
+[node name="Level_1" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.326
+anchor_top = 0.527
+anchor_right = 0.326
+anchor_bottom = 0.527
+offset_left = -90.552
+offset_top = -46.496
+offset_right = 90.448
+offset_bottom = 44.504
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 1"
+
+[node name="Level_2" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.681
+anchor_top = 0.527
+anchor_right = 0.681
+anchor_bottom = 0.527
+offset_left = -89.5121
+offset_top = -43.496
+offset_right = 91.4879
+offset_bottom = 47.504
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 2"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qxrlw")
+volume_db = -29.171
