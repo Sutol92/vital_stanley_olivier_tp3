@@ -1,3 +1,8 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+/game.tscn5067010248.tmp/
+/key.tscn4321008428.tmp/
+/switch.tscn1036052364.tmp/
+/switch.tscn1054418555.tmp/
+/switch.tscn1429855733.tmp/
